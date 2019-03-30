@@ -1,6 +1,6 @@
 import { useQueue, getQueues, getQueuesByKey } from "./lib/index.js";
 
-function main() {
+async function main() {
   const outputEl = document.querySelector('.output');
   const progressEl = document.querySelector('.progress');
 
