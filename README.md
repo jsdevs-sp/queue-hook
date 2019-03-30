@@ -21,17 +21,20 @@
 ### Manifest
 
 ```
-const manifest = {
-  foo: {
+const manifest = [
+  {
+    key: 'foo',
     url: 'mock/foo.json',
   },
-  bar: {
+  {
+    key: 'bar',
     url: 'mock/bar.json',
   },
-  image: {
+  {
+    key: 'image',
     url: 'mock/image.jpg',
-  },
-}
+  }
+]
 
 ```
 
