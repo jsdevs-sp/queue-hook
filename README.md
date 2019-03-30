@@ -4,7 +4,10 @@
 
 ### Web Modules
 
-```<script type="module">import { useQueue, getQueues, getQueuesByKey } from "https://cdn.jsdelivr.net/npm/@jsdevs-sp/queue-hook@0.0.2/lib/index.js";</script>```
+```
+<script type="module">
+  import { useQueue, getQueues, getQueuesByKey } from "https://cdn.jsdelivr.net/npm/@jsdevs-sp/queue-hook@0.0.2/lib/index.js";
+</script>```
 
 ### Node Modules
 
@@ -40,13 +43,13 @@ loadQueue((queue) => {
 
 ```
 
-### loadQueue
+### loadQueueByItem
 
 ```
 const { loadQueueByItem } = useQueue('preload', manifest);
 
 loadQueueByItem(({ item, key, progress, position }) => {
-  console.log('onItemComplete', key, item, progress);
+  console.log('onItemComplete', key, item, progress, position);
 });
 ```
 
