@@ -1,9 +1,12 @@
 {
-  "name": "queue-hook",
-  "version": "0.0.1",
+  "name": "@jsdevs-sp/queue-hook",
+  "version": "0.0.2",
   "description": "",
   "author": "JSDevs SP",
   "license": "MIT",
+  "scripts": {
+    "publish": "npm publish --access=public"
+  },
   "directories": {
     "lib": "lib"
   }
