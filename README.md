@@ -7,7 +7,8 @@
 ```
 <script type="module">
   import { useQueue, getQueues, getQueuesByKey } from "https://cdn.jsdelivr.net/npm/@jsdevs-sp/queue-hook@0.0.2/lib/index.js";
-</script>```
+</script>
+```
 
 ### Node Modules
 
