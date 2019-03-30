@@ -1,3 +1,4 @@
+// import { useQueue, getQueues, getQueuesByKey } from "https://cdn.jsdelivr.net/npm/@jsdevs-sp/queue-hook@0.0.2/lib/index.js";
 import { useQueue, getQueues, getQueuesByKey } from "./lib/index.js";
 
 async function main() {
@@ -14,11 +15,11 @@ async function main() {
     console.log('Main::getQueuesByKey', getQueuesByKey('preload'));
   });
 
-  loadQueueByItem(({ item, key, progress, position }) => {
-    console.log('onItemComplete', key, item, progress);
+  loadQueueByItem(({ item, progress, position, total }) => {
+    console.log('onItemComplete', item, progress);
     outputEl.innerHTML = `
       ${outputEl.innerHTML}
-      <p>${position}/${Object.keys(manifest.default).length} - ${key}</p>
+      <p>${position}/${total} - ${item.key}</p>
     `;
     progressEl.textContent = `${progress * 100}%`;
   });

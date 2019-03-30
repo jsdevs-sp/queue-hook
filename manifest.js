@@ -1,11 +1,14 @@
-export default {
-  foo: {
+export default [
+  {
+    key: 'foo',
     url: 'mock/foo.json',
   },
-  bar: {
+  {
+    key: 'bar',
     url: 'mock/bar.json',
   },
-  image: {
+  {
+    key: 'image',
     url: 'mock/image.jpg',
-  },
-}
+  }
+]
