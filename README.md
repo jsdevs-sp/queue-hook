@@ -38,6 +38,8 @@ const manifest = {
 ### loadQueue
 
 ```
+import { useQueue } from  "@jsdevs-sp/queue-hook;
+
 const { loadQueue } = useQueue('preload', manifest);
 
 loadQueue((queue) => {
@@ -49,10 +51,12 @@ loadQueue((queue) => {
 ### loadQueueByItem
 
 ```
+import { useQueue } from  "@jsdevs-sp/queue-hook;
+
 const { loadQueueByItem } = useQueue('preload', manifest);
 
-loadQueueByItem(({ item, key, progress, position }) => {
-  console.log('onItemComplete', key, item, progress, position);
+loadQueueByItem(({ item, progress, position }) => {
+  console.log('onItemComplete', item, progress, position);
 });
 ```
 
