@@ -1,21 +1,10 @@
-import { useQueue, getQueues, getQueuesByKey } from "./queue-hook.js";
-
-const image = path => new Promise((resolve, reject) => {
-  const url = new URL(path, import.meta.url);
-  const image = new Image();
-  image.onload = () => resolve(image);
-  image.onabort = reject;
-  image.oncancel = reject;
-
-  image.src = url;
-});
+import { useQueue, getQueues, getQueuesByKey } from "./lib/index.js";
 
 async function main() {
   const outputEl = document.querySelector('.output');
   const progressEl = document.querySelector('.progress');
 
-  const manifest = await import('./preload-manifest.js');
-  const imageEl = await image('./image.jpg');
+  const manifest = await import('./manifest.js');
 
   const { loadQueue, loadQueueByItem } = useQueue('preload', manifest.default);
 
@@ -29,7 +18,7 @@ async function main() {
     console.log('onItemComplete', key, item, progress);
     outputEl.innerHTML = `
       ${outputEl.innerHTML}
-      <p>${position}/${Object.keys(manifest).length} - ${key}: ${item.message}</p>
+      <p>${position}/${Object.keys(manifest.default).length} - ${key}</p>
     `;
     progressEl.textContent = `${progress * 100}%`;
   });
