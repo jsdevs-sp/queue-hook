@@ -12,6 +12,8 @@
 
 ### Node Modules
 
+```npm install --save @jsdevs-sp/queue-hook```
+
 ```import { useQueue, getQueues, getQueuesByKey } from  "@jsdevs-sp/queue-hook"```
 
 ## Usage
